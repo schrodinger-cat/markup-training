@@ -1,88 +1,30 @@
 extends layout/base.pug
-
 block vars
-  - var title = "Main page"
+
 
 block extra-meta
 
 block extra-styles
 
 block content
-    .header.dropdown
-        .header_section
-            .w230.header_item.HeaderButton.dropdown-child
-                a.big(href='#') Каталог товаров
-            .w200.header_item.HeaderButton.dropdown-child
-                a.big(href='#') Вязание на заказ
-            .header_logo.header_item.logo
-                img(class='logo-item' src="images/close.svg", alt="", width="20")
-                img(class='logo-menu' src="images/logo-menu.svg", alt="", width="20")
+    //header block
+    include layout/header.pug
 
-        .header_section
-            .header_item_mobile
-            .w85.header_item.HeaderButton.dropdown-child
-                img(class='icon-mob-search' src="images/search.svg", alt="", width="12")
-                a.big(class='mobsearch' href='#')| Поиск по сайту
-            .w320.header_item.HeaderButton.dropdown-child
-                img(class='icon-mob' src="images/cart.svg", alt="", width="12")
-
-                a.big(href='#')  Корзина: пока пуста
+    //home block
+    include layout/home.pug
 
 
-    .home
-        .home_top
-            .w230-tablet.home_top_right
-                a.big(href='#') Каталог товаров
-            .w200-tablet.home_top_right
-                a.big(href='#') Вязание на заказ
-            .w-230.home_top_right
-                a.big(href='#') Новые поступления
-            .w-320.home_top_right
-                a.big(href='#') Распродажа
-            .white.home_top_right
-                a.big(href='#')
-            .w-320-l.home_top_right
-                a(href='#') Бесплатная доставка по России
+    //featured items block
+    include layout/featured.pug
 
-        .home_h1
-            p
-                |&nbsp&nbsp Милые штуки
-                br
-                |  для вашего дома
+    //short blok
+    include layout/about.pug
 
+    //review block
+    include layout/review.pug
 
-        .home_bottom
-            .green-back
-                .green-back-item
-                    a.white(href='#') Предметы
-                                br
-                                |  интерьера
+    //contacts block
+    include layout/contacts.pug
 
-                    img.lamp(src="images/lamp.svg", alt="", width="62", height="62")
-                .green-back-item-d
-                    a.white(href='#') Детские
-                                    br
-                                    |  игрушки
-                    img.lamp(src="images/toy.svg", alt="", width="62",height="62")
-
-    .featured
-        .fe-1
-            a.azur(href='#')  ТОВАР
-                br
-                |  НЕДЕЛИ
-        .fe-2
-            .fe-2-1
-                p
-                    |Вязаные корзинки
-
-            .fe-2-2
-                p Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
-            .fe-2-3
-                .div
-                 p «Тиффани»/серый  25 см  15 см
-                .div
-                  p Цвет:  Диаметр:  Высота:
-                .div
-                  p Цвет:  Диаметр:  Высота:
-
-        .fe-3
+    //footer block
+    include layout/footer.pug
